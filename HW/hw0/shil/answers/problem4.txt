@@ -1,0 +1,27 @@
+1. 
+(a)We have to specify which color and ball variables we want to using in Ball class.
+If we want to use color and ball from inside Ball class, we have to specify as
+this.color/ball. If we want to use pass in variables, we don't need to clarify it.
+we have to make such clarification because pass in variable has the same name
+as private class variable.
+(b)Instead of returning 0 in getVolume(), we should return this.volume
+
+2. 
+I think if we just add a variable to record total volume as we add/remove balls
+from the container will be better. In this case, our call to getVolume() or when we
+add/remove balls only takes O(1) runtime to make access total volume, other method, 
+we would have to go through the entire list of balls every time we call getVolume() 
+function.
+
+3.
+(a) In Box class, we could create a custom sorted arrayList to store all balls in the
+order of increasing volume size. Whenever we add a ball to the last of the list, we 
+reorder all balls in the correct order, then return the iterator of the first ball in 
+the box.
+(b) TreeSet would give a sorted， ascending ordered set. If we use TreeSet to store all 
+the balls, all balls would be sorted by keys, and then we just need to return the iterator
+of the first ball in the TreeSet.
+
+I think method 2 is much better since we don't need to sort the list every time we add
+a ball to the container, it would be a lot efficient.
+

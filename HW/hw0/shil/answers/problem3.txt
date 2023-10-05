@@ -1,0 +1,5 @@
+1. TestThrowsIllegalArugmentException: only negative n is allowed in the if statement, but 0 is incorrectly included.
+
+2. TestBaseCase: Base case n value range is incorrect, correct n value range should be 0 and 1 in this case.
+
+3. TestInductiveCase: return value is incorrect, it should be two previous Fib results instead.
